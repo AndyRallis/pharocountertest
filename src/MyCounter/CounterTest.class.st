@@ -5,6 +5,11 @@ Class {
 }
 
 { #category : #tests }
+CounterTest >> testAlternateCreationMethod [
+	self assert: ((Counter startingAt: 19) increment; count) equals: 20.
+]
+
+{ #category : #tests }
 CounterTest >> testCountIsSetAndRead [
 
 	| c |
@@ -32,4 +37,9 @@ CounterTest >> testIncrement [
 { #category : #tests }
 CounterTest >> testInitializaiton [
 	self assert: Counter new count equals: 0.
+]
+
+{ #category : #tests }
+CounterTest >> testStartingAt5 [
+	self assert: (Counter startingAt: 5) count equals: 5. 
 ]
